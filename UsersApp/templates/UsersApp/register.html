@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block page_title %} Register form {% endblock %}
+
+{% block page_content %} 
+<h1>Register form</h1>
+<form method="post">
+    {% csrf_token %}
+    {if has_error == 'True'}
+        <h2>{{error_msg}}</h2>
+    {% endif%}
+    <label for="username">UserName</label>
+    <input type="text" name="username" id="username"/><br>
+    <label for="password">password</label>
+    <input type="password" name="password" id="password"/><br>
+    <button type="submit">ADD</button>
+</form>
+{% endblock %}
