@@ -28,4 +28,8 @@ def register(request):
         username = request.POST['username']
         password = request.POST['password']
         return HttpResponse('<h1></h1>')
+    
+
+def home(self, request):
+    return HttpResponse("welcome to home")
         
