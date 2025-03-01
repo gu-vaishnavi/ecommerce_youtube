@@ -32,4 +32,7 @@ def register(request):
 
 def home(self, request):
     return HttpResponse("welcome to home")
+
+def test(self, request):
+    return HttpResponse("this is test view")
         
